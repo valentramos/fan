@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://valentramos.github.io',
-  base: 'fan',
+  base: '',
   output: "static",
   integrations: [react(), tailwind({
     applyBaseStyles: false
