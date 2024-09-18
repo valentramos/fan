@@ -1,0 +1,215 @@
+---
+import { Cards } from "@/components/Cards";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+---
+
+<Layout
+	title="+FAN"
+	description="Conecta, fideliza y haz crecer tu comunidad de hinchas"
+	keywords="solunes, startup, bolivia"
+	image="sales.jpg"
+>
+	<section
+		class="w-full h-screen relative flex items-center justify-center bg-[url('banner.jpg')] dark:bg-[url('banner.jpg')] bg-cover bg-no-repeat bg-center"
+		id="inicio"
+	>
+		<div class="absolute inset-0 bg-black opacity-50"></div>
+
+		<div class="relative text-center px-32">
+			<h1 class="text-white lg:text-5xl text-4xl lg:mb-4 mb-16 font-bold">
+				Conecta, fideliza y haz crecer tu comunidad de hinchas
+			</h1>
+			<Button size="lg">
+				<a href="propiedades"> Solicitar una demo </a>
+			</Button>
+		</div>
+	</section>
+
+	<section class="lg:py-16 bg-gradient-to-r from-sky-900 to-blue-950"
+		id="solucion"
+	>
+		<div class="container mx-auto">
+			<div class="text-center lg:px-32">
+				<h5
+					class="text-white lg:text-lg text-4xl lg:mb-4 mb-16 font-bold"
+				>
+					Presentamos: +FAN
+				</h5>
+				<h1
+					class="text-white lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold"
+				>
+					El Ecosistema Integral para Clubes Deportivos
+				</h1>
+				<img src="mindmap.png" class="py-10 mx-auto" />
+				<p class="text-white font-light px-20">
+					+FAN centraliza la gestión de los clubes para aumentar la
+					comunidad de hinchas, ofreciendo distintas soluciones en un
+					solo lugar.
+				</p>
+			</div>
+			<Cards client:load />
+		</div>
+	</section>
+
+	<section class="lg:py-16"
+		id="beneficios"
+	>
+		<div class="container mx-auto">
+			<h1
+				class="lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold text-center text-[#013B79] pb-10"
+			>
+				¿Por qué elegir <span class="text-[#06E3F4]">+</span>FAN?
+			</h1>
+			<div class="grid grid-cols-2 gap-20 items-center">
+				<div>
+					<img src="sales.jpg" class="shadow-lg rounded-md" />
+				</div>
+
+				<div>
+					<p class="text-gray-400 font-light mb-5">
+						+FAN centraliza la gestión de los clubes para aumentar
+						la comunidad de hinchas, ofreciendo distintas soluciones
+						en un solo lugar.
+					</p>
+					<div
+						class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+					>
+						<span
+							class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
+						></span>
+						<p class="text-gray-400 font-light">
+							Aumento de hinchas y fidelización : Solución
+							enfocada para incrementar y fidelizar al jugador
+							numero 12 del equipo.
+						</p>
+					</div>
+					<div
+						class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+					>
+						<span
+							class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
+						></span>
+						<p class="text-gray-400 font-light">
+							Aumento de ingresos: Mayor de asistencia en partidos, mayor de venta de merchandising, mayor de abonos y membresías. 
+						</p>
+					</div>
+					<div
+						class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+					>
+						<span
+							class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
+						></span>
+						<p class="text-gray-400 font-light">
+							Gestión centralizada: Solución enfocada en tener la gestión de un club en un solo lugar, y no tener varios proveedores.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="lg:py-16 bg-[#F2FBFF]">
+		<div class="container mx-auto">
+			<div class="flex gap-10 lg:px-40">
+				<img src="bolivar-icon.png">
+				<h5 class="text-[#013B79] font-light text-xl">“<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel.”</h5>
+			</div>
+	</section>
+
+	<section class="lg:py-16"
+		id="precios"
+	>
+		<div class="container mx-auto">
+			<h1
+				class="lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold text-center text-[#013B79] pb-10"
+			>
+				Planes y precios
+			</h1>
+			
+			<Card>
+				<Table>
+					<TableHeader>
+					  <TableRow>
+						<TableHead className="text-md font-semibold text-[#013B79]">Servicio</TableHead>
+						<TableHead className="text-md font-semibold text-[#013B79]">Plan mensual</TableHead>
+						<TableHead className="text-md font-semibold text-[#013B79]">Implementación</TableHead>
+						<TableHead className="text-md font-semibold text-[#013B79]">Plan anual</TableHead>
+					  </TableRow>
+					</TableHeader>
+					<TableBody>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">Tickets y eventos</TableCell>
+						<TableCell>300 $us</TableCell>
+						<TableCell>1500 $us (Costo único)</TableCell>
+						<TableCell>3000 $us</TableCell>
+					  </TableRow>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">Website</TableCell>
+						<TableCell>200 $us</TableCell>
+						<TableCell>-</TableCell>
+						<TableCell>2000 $us</TableCell>
+					  </TableRow>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">App móvil</TableCell>
+						<TableCell>400 $us</TableCell>
+						<TableCell>1500 $us (Costo único)</TableCell>
+						<TableCell>4000 $us</TableCell>
+					  </TableRow>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">CRM</TableCell>
+						<TableCell>500 $us</TableCell>
+						<TableCell>1000 $us (Costo único)</TableCell>
+						<TableCell>5000 $us</TableCell>
+					  </TableRow>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">Multimedia</TableCell>
+						<TableCell>700 $us</TableCell>
+						<TableCell>-</TableCell>
+						<TableCell>7000 $us</TableCell>
+					  </TableRow>
+					  <TableRow className="font-light text-gray-500">
+						<TableCell className="font-medium text-gray-600">E-commerce</TableCell>
+						<TableCell>300 $us</TableCell>
+						<TableCell>900 $us (Costo único)</TableCell>
+						<TableCell>3000 $us</TableCell>
+					  </TableRow>
+					</TableBody>
+				</Table>
+			</Card>
+		</div>
+	</section>
+
+	<section
+	class="w-full relative lg:py-16 flex items-center justify-center bg-[url('cta.jpg')] bg-cover bg-no-repeat bg-center"
+	>
+		<div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-blue-950 opacity-80"></div>
+
+		<div class="container mx-auto relative px-32">
+			<div class="flex gap-10">
+				<img src="logo-white.svg">
+				<div>
+					<h1 class="text-white lg:text-2xl text-xl lg:mb-5 mb-16 font-bold">
+						La solución integral al alcance de tus manos. El jugador 12 es lo más importante en tu equipo.
+					</h1>
+					<Button>
+						<a href="propiedades"> Agendar una demo </a>
+					</Button>
+					<Button variant="outline">
+						<a href="propiedades"> Contactar con un agente</a>
+					</Button>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="187.162" height="91" viewBox="0 0 187.162 91">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_59" data-name="Rectangle 59" width="41.314" height="41.314" fill="#06e3f4"/>
+    </clipPath>
+  </defs>
+  <g id="Group_43" data-name="Group 43" transform="translate(-33 -60)">
+    <text id="Fan" transform="translate(220.162 137)" fill="#fff" font-size="72" font-family="AllumiStd-ExtraBold, Allumi Std" font-weight="800"><tspan x="-131.904" y="0">Fan</tspan></text>
+    <g id="Group_30" data-name="Group 30" transform="translate(33 93.018)">
+      <rect id="Rectangle_57" data-name="Rectangle 57" width="13.392" height="14.523" transform="translate(0 13.392)" fill="#06e3f4"/>
+      <rect id="Rectangle_58" data-name="Rectangle 58" width="13.399" height="14.523" transform="translate(27.915 13.392)" fill="#06e3f4"/>
+      <g id="Group_28" data-name="Group 28">
+        <g id="Group_27" data-name="Group 27" clip-path="url(#clip-path)">
+          <path id="Path_58" data-name="Path 58" d="M471.722,0h0A13.392,13.392,0,0,1,458.33,13.392H457.2V0Z" transform="translate(-443.807)" fill="#06e3f4"/>
+          <path id="Path_59" data-name="Path 59" d="M470.6,952.992h1.124v13.4H457.2a13.4,13.4,0,0,1,13.4-13.4" transform="translate(-443.808 -925.077)" fill="#06e3f4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
