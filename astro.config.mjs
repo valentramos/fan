@@ -6,7 +6,8 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://valentramos.com',
+  site: 'https://valentramos.github.io',
+  base: 'fan',
   output: "static",
   integrations: [react(), tailwind({
     applyBaseStyles: false
