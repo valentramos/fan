@@ -27,8 +27,8 @@ import {
 	>
 		<div class="absolute inset-0 bg-black opacity-50"></div>
 
-		<div class="relative text-center px-32">
-			<h1 class="text-white lg:text-5xl text-4xl lg:mb-4 mb-16 font-bold">
+		<div class="relative text-center lg:px-32 px-2">
+			<h1 class="text-white lg:text-5xl text-3xl mb-2 font-bold">
 				Conecta, fideliza y haz crecer tu comunidad de hinchas
 			</h1>
 			<Button size="lg">
@@ -37,23 +37,23 @@ import {
 		</div>
 	</section>
 
-	<section class="lg:py-16 bg-gradient-to-r from-sky-900 to-blue-950"
+	<section class="py-16 bg-gradient-to-r from-sky-900 to-blue-950"
 		id="solucion"
 	>
 		<div class="container mx-auto">
 			<div class="text-center lg:px-32">
 				<h5
-					class="text-white lg:text-lg text-4xl lg:mb-4 mb-16 font-bold"
+					class="text-white lg:text-lg mb-4 font-bold"
 				>
 					Presentamos: +FAN
 				</h5>
 				<h1
-					class="text-white lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold"
+					class="text-white text-2xl lg:mb-4 font-bold"
 				>
 					El Ecosistema Integral para Clubes Deportivos
 				</h1>
 				<img src="mindmap.png" class="py-10 mx-auto" />
-				<p class="text-white font-light px-20">
+				<p class="text-white font-light lg:px-20">
 					+FAN centraliza la gestión de los clubes para aumentar la
 					comunidad de hinchas, ofreciendo distintas soluciones en un
 					solo lugar.
@@ -63,16 +63,16 @@ import {
 		</div>
 	</section>
 
-	<section class="lg:py-16"
+	<section class="pt-16"
 		id="beneficios"
 	>
 		<div class="container mx-auto">
 			<h1
-				class="lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold text-center text-[#013B79] pb-10"
+				class="text-2xl lg:mb-4 font-bold text-center text-[#013B79] pb-10"
 			>
 				¿Por qué elegir <span class="text-[#06E3F4]">+</span>FAN?
 			</h1>
-			<div class="grid grid-cols-2 gap-20 items-center">
+			<div class="grid lg:grid-cols-2 gap-20 items-center">
 				<div>
 					<img src="sales.jpg" class="shadow-lg rounded-md" />
 				</div>
@@ -90,7 +90,7 @@ import {
 							class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
 						></span>
 						<p class="text-gray-400 font-light">
-							Aumento de hinchas y fidelización : Solución
+							Aumento de hinchas y fidelización: Solución
 							enfocada para incrementar y fidelizar al jugador
 							numero 12 del equipo.
 						</p>
@@ -118,22 +118,24 @@ import {
 				</div>
 			</div>
 		</div>
-	</section>
 
-	<section class="lg:py-16 bg-[#F2FBFF]">
-		<div class="container mx-auto">
-			<div class="flex gap-10 lg:px-40">
-				<img src="bolivar-icon.png">
-				<h5 class="text-[#013B79] font-light text-xl">“<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel.”</h5>
+		<div class="mt-16 py-16 bg-[#F2FBFF]">
+			<div class="container mx-auto">
+				<div class="lg:flex gap-10 lg:px-40">
+					<img src="bolivar-icon.png">
+					<h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">“<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel.”</h5>
+				</div>
 			</div>
+		</div>
 	</section>
 
-	<section class="lg:py-16"
+
+	<section class="py-16"
 		id="precios"
 	>
 		<div class="container mx-auto">
 			<h1
-				class="lg:text-2xl text-4xl lg:mb-4 mb-16 font-bold text-center text-[#013B79] pb-10"
+				class="text-2xl font-bold text-center text-[#013B79] pb-10"
 			>
 				Planes y precios
 			</h1>
@@ -192,24 +194,26 @@ import {
 	</section>
 
 	<section
-	class="w-full relative lg:py-16 flex items-center justify-center bg-cover bg-no-repeat bg-center"
+	class="w-full relative py-16 bg-cover bg-no-repeat bg-center"
 	style="background-image: url('cta.jpg');"
 	>
 		<div class="absolute inset-0 bg-gradient-to-r from-sky-900 to-blue-950 opacity-80"></div>
 
-		<div class="container mx-auto relative px-32">
-			<div class="flex gap-10">
+		<div class="container mx-auto relative lg:px-32">
+			<div class="lg:flex gap-10">
 				<img src="logo-white.svg">
 				<div>
-					<h1 class="text-white lg:text-2xl text-xl lg:mb-5 mb-16 font-bold">
+					<h1 class="text-white lg:text-2xl mb-5 font-bold">
 						La solución integral al alcance de tus manos. El jugador 12 es lo más importante en tu equipo.
 					</h1>
-					<Button>
-						<a href="propiedades"> Agendar una demo </a>
-					</Button>
-					<Button variant="outline">
-						<a href="propiedades"> Contactar con un agente</a>
-					</Button>
+					<div class="flex gap-4">
+						<Button>
+							<a href="#"> Agendar una demo </a>
+						</Button>
+						<Button variant="outline">
+							<a href="#"> Contactar</a>
+						</Button>
+					</div>
 				</div>
 			</div>
 		</div>
