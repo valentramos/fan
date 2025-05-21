@@ -3,119 +3,153 @@ import { Cards } from "@/components/Cards";
 import Layout from "../layouts/Layout.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { FeaturesCarousel } from "@/components/FeaturesCarousel";
+import { Users, Heart, Trophy, Gift, Target, Star } from "lucide-react";
+
+const items = [
+  {
+    title: "Programa de fidelización",
+    desc: "Recompensa a tus hinchas más fieles con un sistema de puntos y beneficios exclusivos.",
+    img: "community/img-3.png"
+  },
+  {
+    title: "Gestión de membresías",
+    desc: "Administra diferentes niveles de socios y sus beneficios asociados de manera automatizada.",
+    img: "community/img-2.png"
+  },
+  {
+    title: "Comunicación personalizada",
+    desc: "Mantén el contacto directo con tu comunidad a través de notificaciones y contenido exclusivo.",
+    img: "community/img-3.png"
+  },
+  {
+    title: "Análisis de comportamiento",
+    desc: "Conoce mejor a tu comunidad con datos y métricas detalladas de participación.",
+    img: "community/img-2.png"
+  },
+];
 ---
 
 <Layout
   title="Community"
   description="Conecta, fideliza y haz crecer tu comunidad de hinchas"
-  keywords="solunes, startup, bolivia"
-  image="sales.jpg"
+  keywords="comunidad, hinchas, fidelización, clubes deportivos"
+  image="banner.jpg"
 >
   <section
-    class="w-full h-screen relative flex items-center justify-center bg-cover bg-no-repeat bg-center"
+    class="w-full h-screen relative flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
     style="background-image: url('banner.jpg');"
   >
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
     <div class="relative text-center lg:px-32 px-2">
-      <h1 class="text-white lg:text-5xl text-3xl mb-2 font-bold">
+      <h1 class="text-white lg:text-5xl text-3xl mb-2 font-bold drop-shadow-lg animate-fade-in-up animate-delay-300">
         Conecta, fideliza y haz crecer tu comunidad de hinchas
       </h1>
-      <Button size="lg">
+      <p class="text-white text-lg mb-6 drop-shadow animate-fade-in-up animate-delay-600">
+        El Ecosistema Integral para Clubes Deportivos
+      </p>
+      <Button size="lg" className="animate-fade-in-up animate-delay-900">
         <a href="https://wa.link/gakigu" target="_blank">Solicitar una demo</a>
       </Button>
     </div>
   </section>
 
-  <section
-    class="py-16 bg-gradient-to-r from-sky-900 to-blue-950"
-  >
+  <section class="lg:py-24 py-16">
     <div class="container mx-auto">
-      <div class="text-center lg:px-32">
-        <h5 class="text-white lg:text-lg mb-4 font-bold">Presentamos: +FAN</h5>
-        <h1 class="text-white text-2xl lg:mb-4 font-bold">
-          El Ecosistema Integral para Clubes Deportivos
-        </h1>
-        <img src="mindmap.png" class="py-10 mx-auto" />
-        <p class="text-white font-light lg:px-20">
-          +FAN centraliza la gestión de los clubes para aumentar la comunidad de
-          hinchas, ofreciendo distintas soluciones en un solo lugar.
-        </p>
+      <h1 class="text-2xl lg:mb-10 font-bold text-center text-[#013B79]">
+        ¿Por qué elegir nuestra plataforma de comunidad?
+      </h1>
+      <div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
+        <div>
+          <img src="sales.jpg" class="animated-banner rounded-md shadow-lg" />
+        </div>
+        <div class="space-y-4">
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+            <p class="text-gray-600 font-light">
+              <span class="font-medium text-[#013B79]">Aumento de hinchas y fidelización:</span> 
+              Solución enfocada para incrementar y fidelizar al jugador numero 12 del equipo.
+            </p>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+            <p class="text-gray-600 font-light">
+              <span class="font-medium text-[#013B79]">Aumento de ingresos:</span> 
+              Más porcentaje de asistencia en partidos, más procentaje de venta de merchandising, más procentaje de venta de abonos y membresías.
+            </p>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+            <p class="text-gray-600 font-light">
+              <span class="font-medium text-[#013B79]">Gestión centralizada:</span> 
+              Solución enfocada en tener la gestión de un club en un solo lugar, y no tener varios proveedores.
+            </p>
+          </div>
+        </div>
       </div>
-      <Cards client:load />
     </div>
   </section>
 
-  <section class="pt-16">
+  <section class="lg:py-24 py-16 bg-gradient-to-r from-sky-900 to-blue-950">
     <div class="container mx-auto">
-      <h1 class="text-2xl lg:mb-4 font-bold text-center text-[#013B79] pb-10">
-        ¿Por qué elegir <span class="text-[#06E3F4]">+</span>FAN?
+      <h1 class="text-2xl font-bold text-center text-white pb-16">
+        Ecosistema integral para clubes deportivos
       </h1>
-      <div class="grid lg:grid-cols-2 gap-20 items-center">
-        <div>
-          <img src="sales.jpg" class="shadow-lg rounded-md" />
+      <div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
+        <div class="space-y-6 order-2 lg:order-1">
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+            <p class="text-white font-light">
+              <span class="font-medium text-white">Programa de puntos:</span> 
+              Sistema de recompensas por asistencia y participación.
+            </p>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+            <p class="text-white font-light">
+              <span class="font-medium text-white">Beneficios exclusivos:</span> 
+              Accesos VIP, descuentos y experiencias únicas.
+            </p>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+            <p class="text-white font-light">
+              <span class="font-medium text-white">Gestión de socios:</span> 
+              Control de membresías y beneficios asociados.
+            </p>
+          </div>
+          <div class="grid grid-cols-[25px_1fr] items-start">
+            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+            <p class="text-white font-light">
+              <span class="font-medium text-white">Comunicación directa:</span> 
+              Notificaciones y contenido personalizado.
+            </p>
+          </div>
         </div>
-
-        <div>
-          <p class="text-gray-600 font-light mb-5">
-            +FAN centraliza la gestión de los clubes para aumentar la comunidad
-            de hinchas, ofreciendo distintas soluciones en un solo lugar.
-          </p>
-          <div
-            class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-          >
-            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
-            ></span>
-            <p class="text-gray-600 font-light">
-              Aumento de hinchas y fidelización: Solución enfocada para
-              incrementar y fidelizar al jugador numero 12 del equipo.
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-          >
-            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
-            ></span>
-            <p class="text-gray-600 font-light">
-              Aumento de ingresos: Más porcentaje de asistencia en partidos, más
-              procentaje de venta de merchandising, más procentaje de venta de
-              abonos y membresías.
-            </p>
-          </div>
-          <div
-            class="grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-          >
-            <span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"
-            ></span>
-            <p class="text-gray-600 font-light">
-              Gestión centralizada: Solución enfocada en tener la gestión de un
-              club en un solo lugar, y no tener varios proveedores.
-            </p>
-          </div>
+        <div class="order-1 lg:order-2 flex justify-center">
+          <img src="community/img-1.png" alt="Ecosistema integral" class="animated-banner" />
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="mt-16 py-16 bg-[#F2FBFF]">
-      <div class="container mx-auto">
-        <div class="lg:flex gap-10 lg:px-40">
-          <img src="bolivar-icon.png" />
-          <h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">
-            “<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral
-            que ayuda a gestionar en un solo lugar la venta de entradas, venta
-            de productos, generar contenido de valor y dar esa recompensa al
-            hincha fiel.”
-          </h5>
-        </div>
+  <section class="py-16 bg-[#F2FBFF]">
+    <div class="lg:container mx-auto">
+      <h1 class="text-2xl font-bold text-center text-[#013B79]">
+        Experiencia mejorada para los hinchas
+      </h1>
+      <FeaturesCarousel client:load items={items} />
+    </div>
+  </section>
+
+  <section class="pb-16 bg-[#F2FBFF]">
+    <div class="container mx-auto">
+      <div class="lg:flex gap-10 lg:px-40">
+        <img src="bolivar-icon.png" class="m-auto" />
+        <h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">
+          "<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel."
+        </h5>
       </div>
     </div>
   </section>
@@ -123,109 +157,78 @@ import {
   <section class="py-16">
     <div class="container mx-auto">
       <h1 class="text-2xl font-bold text-center text-[#013B79] pb-10">
-        Planes y precios
+        Herramientas de fidelización
       </h1>
-
-      <Card>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="text-md font-semibold text-[#013B79]"
-                >Servicio</TableHead
-              >
-              <TableHead className="text-md font-semibold text-[#013B79]"
-                >Plan mensual</TableHead
-              >
-              <TableHead className="text-md font-semibold text-[#013B79]"
-                >Implementación</TableHead
-              >
-              <TableHead className="text-md font-semibold text-[#013B79]"
-                >Plan anual</TableHead
-              >
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600"
-                >Tickets y eventos</TableCell
-              >
-              <TableCell>300 $us</TableCell>
-              <TableCell>1500 $us (Costo único)</TableCell>
-              <TableCell>3000 $us</TableCell>
-            </TableRow>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600"
-                >Website</TableCell
-              >
-              <TableCell>200 $us</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>2000 $us</TableCell>
-            </TableRow>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600"
-                >App móvil</TableCell
-              >
-              <TableCell>400 $us</TableCell>
-              <TableCell>1500 $us (Costo único)</TableCell>
-              <TableCell>4000 $us</TableCell>
-            </TableRow>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600">CRM</TableCell>
-              <TableCell>500 $us</TableCell>
-              <TableCell>1000 $us (Costo único)</TableCell>
-              <TableCell>5000 $us</TableCell>
-            </TableRow>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600"
-                >Multimedia</TableCell
-              >
-              <TableCell>700 $us</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>7000 $us</TableCell>
-            </TableRow>
-            <TableRow className="font-light text-gray-500">
-              <TableCell className="font-medium text-gray-600"
-                >E-commerce</TableCell
-              >
-              <TableCell>300 $us</TableCell>
-              <TableCell>900 $us (Costo único)</TableCell>
-              <TableCell>3000 $us</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-      </Card>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-10">
+        <Card className="flex items-start gap-4 p-4">
+          <Users className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Gestión de perfiles de usuarios y niveles de membresía personalizados.
+          </p>
+        </Card>
+        <Card className="flex items-start gap-4 p-4">
+          <Heart className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Sistema de puntos y recompensas por participación y asistencia.
+          </p>
+        </Card>
+        <Card className="flex items-start gap-4 p-4">
+          <Trophy className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Programa de beneficios exclusivos para socios premium.
+          </p>
+        </Card>
+        <Card className="flex items-start gap-4 p-4">
+          <Gift className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Cupones y descuentos especiales en productos oficiales.
+          </p>
+        </Card>
+        <Card className="flex items-start gap-4 p-4">
+          <Target className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Segmentación de audiencia para comunicaciones personalizadas.
+          </p>
+        </Card>
+        <Card className="flex items-start gap-4 p-4">
+          <Star className="text-sky-700 flex-shrink-0" size={32} />
+          <p class="text-gray-600 font-light">
+            Experiencias VIP y accesos especiales para miembros destacados.
+          </p>
+        </Card>
+      </div>
     </div>
   </section>
 
-  <section
-    class="w-full relative py-16 bg-cover bg-no-repeat bg-center"
-    style="background-image: url('cta.jpg');"
-  >
-    <div
-      class="absolute inset-0 bg-gradient-to-r from-sky-900 to-blue-950 opacity-80"
-    >
-    </div>
-
-    <div class="container mx-auto relative lg:px-32">
-      <div class="lg:flex gap-10">
-        <img src="logo-white.svg" class="w-1/4" />
-        <div>
-          <h1 class="text-white lg:text-2xl mb-5 font-bold">
-            La solución integral al alcance de tus manos. El jugador 12 es lo
-            más importante en tu equipo.
-          </h1>
-          <div class="flex gap-4">
-            <Button>
-              <a href="https://wa.link/gakigu" target="_blank">
-                Agendar una demo
-              </a>
-            </Button>
-            <Button variant="outline">
-              <a href="https://wa.link/gakigu" target="_blank"> Contactar</a>
-            </Button>
+  <section class="py-16">
+    <div class="container mx-auto">
+      <Card className="w-full max-w-5xl mx-auto p-0 overflow-hidden shadow-lg border-0 relative"
+        style={{
+          background: "linear-gradient(66deg, #013b7900 30%, #06E3F4 100%)",
+        }}>
+        <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
+        <div class="flex flex-col lg:flex-row items-center relative z-10">
+          <div class="flex-1 p-10">
+            <h2 class="text-3xl font-bold text-[#013B79] mb-4">
+              ¿Listo para transformar tu comunidad de hinchas?
+            </h2>
+            <p class="text-gray-700 mb-8">
+              Solicita una demo personalizada o contáctanos para descubrir cómo nuestra plataforma puede ayudarte a crecer.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <Button size="lg">
+                <a href="https://wa.link/gakigu" target="_blank">Solicitar demo</a>
+              </Button>
+              <Button variant="outline" size="lg">
+                <a href="https://wa.me/59178400000" target="_blank">Contactar por WhatsApp</a>
+              </Button>
+            </div>
+          </div>
+          <div class="flex-1 flex justify-center items-center p-10">
+            <img src="favicon.svg" class="mr-3 w-48" alt="Fan Logo" />
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   </section>
 </Layout>
