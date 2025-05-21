@@ -1,0 +1,249 @@
+---
+import { Cards } from "@/components/Cards";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Fragment } from "react";
+import { FeaturesCarousel } from "@/components/FeaturesCarousel";
+import { QrCode, WifiOff, CheckCircle2, Clock, LogIn, BarChart2 } from "lucide-react";
+
+const items = [
+  {
+    title: "Catálogo de eventos personalizado",
+    desc: "Tu público podrá explorar tus eventos con identidad visual propia, en cualquier dispositivo.",
+    img: "ticketing/mobile-1.png"
+  },
+  {
+    title: "Flujo de compra optimizado",
+    desc: "Compra simple y rápida, con múltiples medios de pago integrados directamente en tu plataforma.",
+    img: "ticketing/mobile-2.png"
+  },
+  {
+    title: "Reservas y ubicaciones preferenciales",
+    desc: "Permite a tus asistentes elegir zonas VIP, palcos o mesas desde el celular, sin fricción.",
+    img: "ticketing/mobile-3.png"
+  },
+  {
+    title: "Diseño 100% white-label",
+    desc: "Cada pantalla se adapta a tu imagen corporativa: logo, colores y dominio propio.",
+    img: "ticketing/mobile-4.png"
+  },
+];
+---
+
+<Layout
+	title="Ticketing"
+	description="Vende entradas, controla accesos y gestiona tus eventos bajo tu propia marca."
+	keywords="ticketing, eventos, white-label, entradas, control de acceso, plataforma"
+	image="sales.jpg"
+>
+	<section
+		class="w-full h-screen relative flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
+		id="inicio"
+		style="background-image: url('https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg');"
+	>
+		<div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+		<div class="relative text-center lg:px-32 px-2">
+			<h1 class="text-white lg:text-5xl text-3xl mb-2 font-bold drop-shadow-lg animate-fade-in-up animate-delay-300">
+				Plataforma de Ticketing
+			</h1>
+			<p class="text-white text-lg mb-6 drop-shadow animate-fade-in-up animate-delay-600">
+				Vende entradas, controla accesos y gestiona tus eventos bajo tu propia marca.
+			</p>
+			<Button size="lg" className="animate-fade-in-up animate-delay-900">
+				<a href="https://wa.link/gakigu" target="_blank">Explorar Demo</a>
+			</Button>
+		</div>
+	</section>
+
+	<!-- <section class="py-16 bg-gradient-to-r from-sky-900 to-blue-950" id="solucion">
+		<div class="container mx-auto">
+			<div class="text-center lg:px-32">
+				<h5 class="text-white lg:text-xl mb-4 font-bold">¿Qué es la plataforma?</h5>
+				<p class="text-white font-light lg:px-20">
+					Desarrollamos, implementamos y damos soporte a una plataforma de ticketing white-label orientada a la venta de entradas, control de accesos y gestión financiera automatizada. Diseñada para operar bajo tu marca, es ideal para eventos, festivales, clubes, productoras o recintos que buscan profesionalizar su canal de ventas digitales.
+				</p>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="lg:py-24 py-16" id="beneficios">
+		<div class="container mx-auto">
+			<h1 class="text-2xl lg:mb-10 font-bold text-center text-[#013B79]">
+				¿Por qué elegir nuestra plataforma de ticketing?
+			</h1>
+			<div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
+				<div>
+					<img src="banner-2.png" class="animated-banner" />
+				</div>
+				<div class="space-y-4">
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+						<p class="text-gray-600 font-light">
+							<span class="font-medium text-[#013B79]">Recaudación directa y diaria:</span> Olvídate de esperar, recibe tus pagos cada día directamente en tu cuenta bancaria.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+						<p class="text-gray-600 font-light">
+							<span class="font-medium text-[#013B79]">La mejor comisión del mercado:</span> Sin costos ocultos ni sorpresas, maximiza tus ingresos desde el primer ticket vendido.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+						<p class="text-gray-600 font-light">
+							<span class="font-medium text-[#013B79]">100% Whitelabel y autoadministrable:</span> Tu marca, tus colores, tu dominio y total control de la plataforma. ¡Hazla tuya!
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-primary"></span>
+						<p class="text-gray-600 font-light">
+							<span class="font-medium text-[#013B79]">Tecnología robusta y escalable:</span> Soporta alta demanda, gestiona colas virtuales, administra accesos y mantén el control total de tu evento.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="lg:py-24 py-16 bg-gradient-to-r from-sky-900 to-blue-950" id="personalizacion">
+		<div class="container mx-auto">
+			<h1 class="text-2xl font-bold text-center text-white pb-16">
+				Personalización visual y marca blanca
+			</h1>
+			<div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
+				<div class="space-y-6 order-2 lg:order-1">
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+						<p class="text-white font-light">
+							<span class="font-medium text-white">Instancia propia:</span> Dominio o subdominio personalizado para tu marca.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+						<p class="text-white font-light">
+							<span class="font-medium text-white">Identidad visual:</span> Logo, colores institucionales, banners y tipografía a medida.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+						<p class="text-white font-light">
+							<span class="font-medium text-white">Diseño responsivo:</span> Compatible con dispositivos móviles.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+						<p class="text-white font-light">
+							<span class="font-medium text-white">Panel exclusivo:</span> Administración modular y flexible.
+						</p>
+					</div>
+					<div class="grid grid-cols-[25px_1fr] items-start">
+						<span class="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
+						<p class="text-white font-light">
+							<span class="font-medium text-white">URL públicas sin marcas de terceros:</span> Ideal para comunicación comercial directa.
+						</p>
+					</div>
+				</div>
+				<div class="order-1 lg:order-2 flex justify-center">
+					<img src="ticketing/admin-4.png" alt="Personalización visual" class="animated-banner"/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16 bg-[#F2FBFF]" id="caracteristicas">
+		<div class="lg:container mx-auto">
+			<h1 class="text-2xl font-bold text-center text-[#013B79]">
+				Experiencia mejorada para los usuarios
+			</h1>
+			<FeaturesCarousel client:load items={items} />
+		</div>
+	</section>
+
+	<section class="pb-16 bg-[#F2FBFF]">
+		<div class="container mx-auto">
+			<div class="lg:flex gap-10 lg:px-40">
+				<img src="bolivar-icon.png" class="m-auto">
+				<h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">“<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel.”</h5>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16" id="app-control">
+		<div class="container mx-auto">
+			<h1 class="text-2xl font-bold text-center text-[#013B79] pb-10">
+				App de control de acceso y validación
+			</h1>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-10">
+				<Card className="flex items-start gap-4 p-4">
+					<QrCode className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Escaneo de entradas mediante código QR, cédula de identidad y tecnología NFC.</p>
+				</Card>
+				<Card className="flex items-start gap-4 p-4">
+					<WifiOff className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Validación online y offline, con sincronización automática en red.</p>
+				</Card>
+				<Card className="flex items-start gap-4 p-4">
+					<CheckCircle2 className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Validación automática de entradas válidas, duplicadas e inválidas.</p>
+				</Card>
+				<Card className="flex items-start gap-4 p-4">
+					<Clock className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Registro de accesos por tramo horario, tipo de entrada y punto de ingreso.</p>
+				</Card>
+				<Card className="flex items-start gap-4 p-4">
+					<LogIn className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Control de ingreso múltiple, reingresos y accesos especiales.</p>
+				</Card>
+				<Card className="flex items-start gap-4 p-4">
+					<BarChart2 className="text-sky-700 flex-shrink-0" size={32} />
+					<p class="text-gray-600 font-light">Reportes de asistencia en tiempo real para el organizador.</p>
+				</Card>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-16">
+		<div class="container mx-auto">
+			<Card className="w-full max-w-5xl mx-auto p-0 overflow-hidden shadow-lg border-0 relative" style={{ background: 'linear-gradient(66deg, #013b7900 30%, #06E3F4 100%)' }}>
+				<div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
+				<div class="flex flex-col lg:flex-row items-center relative z-10">
+					<div class="flex-1 p-10">
+						<h2 class="text-3xl font-bold text-[#013B79] mb-4">¿Listo para llevar tu ticketing al siguiente nivel?</h2>
+						<p class="text-gray-700 mb-8">Solicita una demo personalizada o contáctanos para descubrir cómo nuestra plataforma puede ayudarte a crecer.</p>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<Button size="lg">
+								<a href="https://wa.link/gakigu" target="_blank">Explorar demo</a>
+							</Button>
+							<Button variant="outline" size="lg">
+								<a href="https://wa.me/59178400000" target="_blank">Contactar por WhatsApp</a>
+							</Button>
+						</div>
+					</div>
+					<div class="flex-1 flex justify-center items-center p-10">
+						<img src="favicon.svg" class="mr-3 w-48" alt="Fan Logo" />
+					</div>
+				</div>
+			</Card>
+		</div>
+	</section>
+
+</Layout>
