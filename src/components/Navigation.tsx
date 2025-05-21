@@ -1,60 +1,48 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
+import { usePathname } from "@/lib/navigation";
 
 import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
-import { Button } from "./ui/button"
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 export function Navigation() {
-    const [activeSection, setActiveSection] = React.useState('');
+  const pathname = usePathname();
+  
+  const menuItems = [
+    { href: "/", label: "Inicio" },
+    { href: "/ticketing", label: "Ticketing" },
+    { href: "/comunidad", label: "Comunidad" },
+  ];
 
-    React.useEffect(() => {
-        const handleScroll = () => {
-            const currentSection = document.body.getAttribute('data-active-section');
-            if (currentSection) {
-                setActiveSection(currentSection);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const menuItems = [
-        { href: "#inicio", label: "Inicio" },
-        { href: "#solucion", label: "Solución" },
-        { href: "#beneficios", label: "Beneficios" },
-        { href: "#precios", label: "Precios" },
-    ];
-
-    return (
-        <NavigationMenu>
-            <NavigationMenuList>
-                {menuItems.map((item) => (
-                    <NavigationMenuItem key={item.label} className="hidden lg:block">
-                        <NavigationMenuLink asChild>
-                            <a
-                                href={item.href}
-                                className={cn(
-                                    navigationMenuTriggerStyle(),
-                                    activeSection === item.href.slice(1) && "text-primary font-bold"
-                                )}
-                            >
-                                {item.label}
-                            </a>
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                ))}
-            </NavigationMenuList>
-        </NavigationMenu>
-    )
+  return (
+    <NavigationMenu>
+      <NavigationMenuList>
+        {menuItems.map((item) => (
+          <NavigationMenuItem key={item.label}>
+            <NavigationMenuLink asChild>
+              <a
+                href={item.href}
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "text-gray-600 hover:text-[#013B79]",
+                  pathname === item.href && "text-[#013B79] font-semibold bg-blue-50"
+                )}
+              >
+                {item.label}
+              </a>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        ))}
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
 }

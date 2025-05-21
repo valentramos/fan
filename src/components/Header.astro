@@ -5,21 +5,24 @@ import { ContactModal } from "../components/ContactModal";
 ---
 
 <nav
-    class="bg-white dark:bg-black sm:px-4 py-2 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-none"
-    id="main-nav"
+  class="bg-white dark:bg-black sm:px-4 py-2 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-none"
+  id="main-nav"
 >
-    <div class="lg:container px-4 lg:px-0 flex justify-between items-center mx-auto z-50">
-        <a href="#inicio" class="flex items-center">
-            <img src="favicon.svg" class="mr-3 w-24 h-8 sm:h-8" alt="Fan Logo" />
-        </a>
+  <div
+    class="lg:container px-4 lg:px-0 flex justify-between items-center mx-auto z-50"
+  >
+    <a href="/" class="flex items-center">
+      <img src="favicon.svg" class="mr-3 w-24 h-8 sm:h-8" alt="Fan Logo" />
+    </a>
 
-        <div class="flex gap-4 items-center md:order-2">
-            <Navigation client:load />
-            <ContactModal client:load buttonText="Explorar Demo" />
-            <ContactModal client:load buttonText="Contactar" />
-            <div class="hidden">
-                <MobileMenu client:load />
-            </div>
-        </div>
+    <div class="flex gap-4 items-center md:order-2">
+      <div class="hidden md:block">
+        <Navigation client:load />
+      </div>
+      <ContactModal client:load buttonText="Contactar" />
+      <div class="block md:hidden">
+        <MobileMenu client:load />
+      </div>
     </div>
+  </div>
 </nav>

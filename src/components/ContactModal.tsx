@@ -15,7 +15,7 @@ export function ContactModal({ buttonText }: InfoModalProps) {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant="outline" size="sm">{buttonText}</Button>
+                <Button size="sm">{buttonText}</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] lg:max-w-screen-md max-w-xs">
                 <div className="lg:flex gap-10 items-center">
