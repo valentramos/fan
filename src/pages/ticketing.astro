@@ -1,27 +1,9 @@
 ---
-import { Cards } from "@/components/Cards";
 import Layout from "../layouts/Layout.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Fragment } from "react";
 import { FeaturesCarousel } from "@/components/FeaturesCarousel";
+import { EventTypeTabs } from "@/components/EventTypeTabs";
 import {
   QrCode,
   WifiOff,
@@ -29,6 +11,9 @@ import {
   Clock,
   LogIn,
   BarChart2,
+  Music,
+  Trophy,
+  PartyPopper,
 } from "lucide-react";
 
 const items = [
@@ -79,24 +64,19 @@ const items = [
         Vende entradas, controla accesos y gestiona tus eventos bajo tu propia
         marca.
       </p>
-      <Button size="lg" className="animate-fade-in-up animate-delay-900" variant="secondary">
-        <a href="https://balletruso.test.front.solunes.com/home" target="_blank">Explorar demo</a>
+      <Button
+        size="lg"
+        className="animate-fade-in-up animate-delay-900"
+        variant="secondary"
+      >
+        <a href="https://balletruso.test.front.solunes.com/home" target="_blank"
+          >Explorar demo</a
+        >
       </Button>
     </div>
   </section>
 
-  <!-- <section class="py-16 bg-gradient-to-r from-sky-900 to-blue-950">
-		<div class="container mx-auto">
-			<div class="text-center lg:px-32">
-				<h5 class="text-white lg:text-xl mb-4 font-bold">¿Qué es la plataforma?</h5>
-				<p class="text-white font-light lg:px-20">
-					Desarrollamos, implementamos y damos soporte a una plataforma de ticketing white-label orientada a la venta de entradas, control de accesos y gestión financiera automatizada. Diseñada para operar bajo tu marca, es ideal para eventos, festivales, clubes, productoras o recintos que buscan profesionalizar su canal de ventas digitales.
-				</p>
-			</div>
-		</div>
-	</section> -->
-
-  <section class="lg:py-24 py-16">
+  <section class="lg:py-24 py-8">
     <div class="container mx-auto">
       <h1 class="text-2xl lg:mb-10 font-bold text-center text-[#013B79]">
         ¿Por qué elegir nuestra plataforma de ticketing?
@@ -151,9 +131,7 @@ const items = [
     </div>
   </section>
 
-  <section
-    class="lg:py-24 py-16 bg-gradient-to-r from-sky-900 to-blue-950"
-  >
+  <section class="lg:py-24 py-8 bg-gradient-to-r from-sky-900 to-blue-950">
     <div class="container mx-auto">
       <h1 class="text-2xl font-bold text-center text-white pb-16">
         Personalización visual y marca blanca
@@ -227,10 +205,9 @@ const items = [
       <div class="lg:flex gap-10 lg:px-40">
         <img src="bolivar-icon.png" class="m-auto" />
         <h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">
-          “<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral
-          que ayuda a gestionar en un solo lugar la venta de entradas, venta de
-          productos, generar contenido de valor y dar esa recompensa al hincha
-          fiel.”
+          "+"FAN es una plataforma integral que ayuda a gestionar en un solo
+          lugar la venta de entradas, venta de productos, generar contenido de
+          valor y dar esa recompensa al hincha fiel."
         </h5>
       </div>
     </div>
@@ -286,6 +263,15 @@ const items = [
     </div>
   </section>
 
+  <section class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-bold text-center text-[#013B79] mb-10">
+        Soluciones para cada tipo de evento
+      </h2>
+      <EventTypeTabs client:load />
+    </div>
+  </section>
+
   <section class="py-16">
     <div class="container mx-auto">
       <Card
@@ -306,8 +292,9 @@ const items = [
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <Button size="lg">
-                <a href="https://balletruso.test.front.solunes.com/home" target="_blank"
-                  >Explorar demo</a
+                <a
+                  href="https://balletruso.test.front.solunes.com/home"
+                  target="_blank">Explorar demo</a
                 >
               </Button>
               <Button variant="secondary" size="lg">
