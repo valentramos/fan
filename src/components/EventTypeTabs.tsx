@@ -114,7 +114,7 @@ export function EventTypeTabs() {
                 <p className="text-gray-600 mb-6 font-light">
                   Automatiza la venta de entradas y reservas para locales
                   nocturnos, optimizando la experiencia de tus clientes y
-                  mejorando el control de tu venue.
+                  mejorando el control de tu espacio.
                 </p>
                 <ul className="space-y-3 font-light">
                   <li className="flex items-start gap-2">
@@ -128,7 +128,7 @@ export function EventTypeTabs() {
                   <li className="flex items-start gap-2">
                     <span className="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
                     <span>
-                      Control de aforo y validación de edad en accesos
+                      Control de aforo y promociones para grupos VIP
                     </span>
                   </li>
                 </ul>
