@@ -19,7 +19,7 @@ export function MobileMenu() {
   const menuItems = [
     { href: "/", label: "Inicio" },
     { href: "/ticketing", label: "Ticketing" },
-    { href: "/comunidad", label: "Comunidad" },
+    { href: "/loyalty", label: "Loyalty" },
   ];
 
   return (
