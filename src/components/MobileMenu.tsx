@@ -52,13 +52,13 @@ export function MobileMenu() {
             </a>
           ))}
         </div>
-        <SheetFooter>
+        {/* <SheetFooter>
           <SheetClose asChild>
             <Button className="w-full">
               <a href="#contact">Contactar</a>
             </Button>
           </SheetClose>
-        </SheetFooter>
+        </SheetFooter> */}
       </SheetContent>
     </Sheet>
   );

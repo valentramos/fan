@@ -32,11 +32,11 @@ export function ContactModal({ buttonText }: InfoModalProps) {
             </p>
             <Button size="lg">
               <a
-                href="https://wa.link/gakigu"
-                target="_blanck"
+                href="https://wa.me/56938865190"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                Chatea con un agente
+                Contacta con un agente comercial
               </a>
             </Button>
           </div>
