@@ -40,7 +40,7 @@ export function Navigation() {
         {
           title: "Real Estate",
           href: "https://solunes.cl/real-estate",
-          description: "Genera un chatbot a medida que permita realizar conversaciones naturales con tus clientes adaptado a las necesidades de tu empresa.",
+          description: "Gestiona de manera eficiente tus propiedades y clientes inmobiliarios con nuestra plataforma especializada en Real Estate. Optimiza procesos y mejora la experiencia del cliente.",
           icon: Building2
         }
       ]
