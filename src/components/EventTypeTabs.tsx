@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Music, Trophy, PartyPopper } from "lucide-react";
+import { Button } from "./ui/button";
 
 export function EventTypeTabs() {
   return (
@@ -32,7 +33,7 @@ export function EventTypeTabs() {
                   plataforma diseñada para maximizar la experiencia del público
                   y simplificar la operación.
                 </p>
-                <ul className="space-y-3 font-light">
+                <ul className="space-y-3 font-light mb-4">
                   <li className="flex items-start gap-2">
                     <span className="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
                     <span>
@@ -48,6 +49,11 @@ export function EventTypeTabs() {
                     <span>Control de accesos multi-etapa para festivales</span>
                   </li>
                 </ul>
+                <Button variant="secondary" size="lg">
+                  <a href="https://balletruso.test.front.solunes.com/home" target="_blank">
+                    Explorar demo
+                  </a>
+                </Button>
               </div>
               <div className="flex justify-center">
                 <img
@@ -73,7 +79,7 @@ export function EventTypeTabs() {
                   organizadores de torneos que buscan modernizar su sistema de
                   ticketing y fidelizar a sus hinchas.
                 </p>
-                <ul className="space-y-3 font-light">
+                <ul className="space-y-3 font-light mb-4">
                   <li className="flex items-start gap-2">
                     <span className="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
                     <span>Sistema de abonos y membresías con beneficios</span>
@@ -91,6 +97,11 @@ export function EventTypeTabs() {
                     </span>
                   </li>
                 </ul>
+                <Button variant="secondary" size="lg">
+                  <a href="https://chile.test.front.solunes.com/" target="_blank">
+                    Explorar demo
+                  </a>
+                </Button>
               </div>
               <div className="flex justify-center">
                 <img
@@ -116,7 +127,7 @@ export function EventTypeTabs() {
                   nocturnos, optimizando la experiencia de tus clientes y
                   mejorando el control de tu espacio.
                 </p>
-                <ul className="space-y-3 font-light">
+                <ul className="space-y-3 font-light mb-4">
                   <li className="flex items-start gap-2">
                     <span className="flex h-2 w-2 translate-y-2 rounded-full bg-[#06E3F4]"></span>
                     <span>Sistema de reservas VIP con pago anticipado</span>
@@ -132,6 +143,11 @@ export function EventTypeTabs() {
                     </span>
                   </li>
                 </ul>
+                <Button variant="secondary" size="lg">
+                  <a href="https://ambar.demo.front.solunes.com/home" target="_blank">
+                    Explorar demo
+                  </a>
+                </Button>
               </div>
               <div className="flex justify-center">
                 <img
