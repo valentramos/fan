@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import Layout from "../layouts/Layout.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -20,22 +21,22 @@ const items = [
   {
     title: "Catálogo de eventos personalizado",
     desc: "Tu público podrá explorar tus eventos con identidad visual propia, en cualquier dispositivo.",
-    img: "/ticketing/mobile-1.png",
+    img: withBase("/ticketing/mobile-1.png"),
   },
   {
     title: "Flujo de compra optimizado",
     desc: "Compra simple y rápida, con múltiples medios de pago integrados directamente en tu plataforma.",
-    img: "/ticketing/mobile-2.png",
+    img: withBase("/ticketing/mobile-2.png"),
   },
   {
     title: "Reservas y ubicaciones preferenciales",
     desc: "Permite a tus asistentes elegir zonas VIP, palcos o mesas desde el celular, sin fricción.",
-    img: "/ticketing/mobile-3.png",
+    img: withBase("/ticketing/mobile-3.png"),
   },
   {
     title: "Diseño 100% white-label",
     desc: "Cada pantalla se adapta a tu imagen corporativa: logo, colores y dominio propio.",
-    img: "/ticketing/mobile-4.png",
+    img: withBase("/ticketing/mobile-4.png"),
   },
 ];
 ---
@@ -44,7 +45,7 @@ const items = [
   title="Ticketing"
   description="Vende entradas, controla accesos y gestiona tus eventos bajo tu propia marca."
   keywords="ticketing, eventos, white-label, entradas, control de acceso, plataforma"
-  image="/icon.png"
+  image={withBase("/icon.png")}
 >
   <section
     class="w-full h-screen relative flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
@@ -83,7 +84,7 @@ const items = [
       </h1>
       <div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
         <div>
-          <img src="/banner-2.png" class="animated-banner" />
+          <img src={withBase("/banner-2.png")} class="animated-banner" />
         </div>
         <div class="space-y-4">
           <div class="grid grid-cols-[25px_1fr] items-start">
@@ -182,7 +183,7 @@ const items = [
         </div>
         <div class="order-1 lg:order-2 flex justify-center">
           <img
-            src="/ticketing/admin-4.png"
+            src={withBase("/ticketing/admin-4.png")}
             alt="Personalización visual"
             class="animated-banner"
           />
@@ -203,7 +204,7 @@ const items = [
   <section class="pb-16 bg-[#F2FBFF]">
     <div class="container mx-auto">
       <div class="lg:flex gap-10 lg:px-40">
-        <img src="/bolivar-icon.png" class="m-auto" />
+        <img src={withBase("/bolivar-icon.png")} class="m-auto" />
         <h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">
           "+"FAN es una plataforma integral que ayuda a gestionar en un solo
           lugar la venta de entradas, venta de productos, generar contenido de
@@ -305,7 +306,7 @@ const items = [
             </div>
           </div>
           <div class="flex-1 flex justify-center items-center p-10">
-            <img src="/favicon.svg" class="mr-3 w-48" alt="Fan Logo" />
+            <img src={withBase("/favicon.svg")} class="mr-3 w-48" alt="Fan Logo" />
           </div>
         </div>
       </Card>

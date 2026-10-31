@@ -11,15 +11,15 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { usePathname } from "@/lib/navigation";
-import { cn } from "@/lib/utils";
+import { cn, isSamePath, withBase } from "@/lib/utils";
 
 export function MobileMenu() {
   const pathname = usePathname();
   
   const menuItems = [
-    { href: "/", label: "Inicio" },
-    { href: "/ticketing", label: "Ticketing" },
-    { href: "/loyalty", label: "Loyalty" },
+    { href: withBase("/"), label: "Inicio" },
+    { href: withBase("/ticketing"), label: "Ticketing" },
+    { href: withBase("/loyalty"), label: "Loyalty" },
     { 
       href: "https://solunes.cl/crm", 
       label: "CRM",
@@ -47,7 +47,7 @@ export function MobileMenu() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>
-            <img src="/favicon.svg" className="h-8 mx-auto" alt="Fan Logo" />
+            <img src={withBase("/favicon.svg")} className="h-8 mx-auto" alt="Fan Logo" />
           </SheetTitle>
           <SheetDescription className="py-5">
             Bienvenid@ a +FAN
@@ -62,7 +62,7 @@ export function MobileMenu() {
               rel={item.isExternal ? "noopener noreferrer" : undefined}
               className={cn(
                 "text-gray-600 hover:text-[#013B79] transition-colors py-1",
-                pathname === item.href && "text-[#013B79] font-semibold"
+                isSamePath(pathname, item.href) && "text-[#013B79] font-semibold"
               )}
             >
               {item.label}

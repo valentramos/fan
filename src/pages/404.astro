@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import Clean from "../layouts/Clean.astro";
 ---
 
@@ -16,7 +17,7 @@ import Clean from "../layouts/Clean.astro";
 					</h6>
 					<a class="text-center block w-2/5 m-auto bg-blue-500 rounded-full py-3 px-6 text-white transition-opacity
 					2xl:text-xl font-semibold
-					hover:bg-blue-600" href="/">
+					hover:bg-blue-600" href={withBase("/")}>
 						Volver al Inicio
 					</a>
 				</div>
