@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import { Navigation } from "../components/Navigation";
 import { MobileMenu } from "../components/MobileMenu";
 import { ContactModal } from "../components/ContactModal";
@@ -9,8 +10,8 @@ import { ContactModal } from "../components/ContactModal";
     id="main-nav"
 >
     <div class="lg:container px-4 lg:px-0 flex justify-between items-center mx-auto z-50">
-        <a href="/" class="flex items-center">
-            <img src="favicon.svg" class="mr-3 w-24 h-8 sm:h-8" alt="Valent Logo" />
+        <a href={withBase("/")} class="flex items-center">
+            <img src={withBase("/favicon.svg")} class="mr-3 w-24 h-8 sm:h-8" alt="Valent Logo" />
         </a>
 
         <div class="flex gap-4 items-center md:order-2">

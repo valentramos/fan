@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
     Sheet,
@@ -22,16 +23,16 @@ export function MobileMenu() {
             <SheetContent>
                 <SheetHeader>
                     <SheetTitle>
-                        <img src="/favicon.svg" className="h-8 mx-auto" alt="Valent Logo" />                        
+                        <img src={withBase("/favicon.svg")} className="h-8 mx-auto" alt="Valent Logo" />                        
                     </SheetTitle>
                     <SheetDescription className="py-5">
                         Bienvenid@ a mi sitio web.
                     </SheetDescription>
                 </SheetHeader>
                 <div className="w-full grid gap-5 my-10">                    
-                    <a href="/">Inicio</a>
-                    <a href="/maintenance">Solución</a>
-                    <a href="/maintenance">Precios</a>
+                    <a href={withBase("/")}>Inicio</a>
+                    <a href={withBase("/maintenance")}>Solución</a>
+                    <a href={withBase("/maintenance")}>Precios</a>
                 </div>
 
                 <SheetFooter>

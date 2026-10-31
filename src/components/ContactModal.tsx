@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/utils"
 import { Button } from "@/components/ui/button";
 import {
     Dialog,
@@ -19,7 +20,7 @@ export function ContactModal({ buttonText }: InfoModalProps) {
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px] lg:max-w-screen-md max-w-xs">
                 <div className="lg:flex gap-10 items-center">
-                    <img className="rounded-md lg:h-36 h-auto my-4 lg:my-0" src="agent.jpg"></img>
+                    <img className="rounded-md lg:h-36 h-auto my-4 lg:my-0" src={withBase("/agent.jpg")}></img>
                     <div className="lg:text-left text-center">
                         <DialogHeader>
                             <DialogTitle>¿Quieres llevar tu club de fútbol al siguiente nivel?</DialogTitle>
