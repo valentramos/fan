@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import Layout from "../layouts/Layout.astro";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,22 +10,22 @@ const items = [
   {
     title: "Mercado de puntos",
     desc: "Transforma la lealtad en recompensas tangibles con nuestro innovador sistema de intercambio de puntos.",
-    img: "/community/1.jpg"
+    img: withBase("/community/1.jpg")
   },
   {
     title: "Contenido exclusivo y en vivo",
     desc: "Acceso a transmisiones en vivo, contenido entre bastidores y momentos únicos del equipo.",
-    img: "/community/2.jpg"
+    img: withBase("/community/2.jpg")
   },
   {
     title: "Información y contenido",
     desc: "Acceso a noticias, blogs, boletines informativos y contenido exclusivo de tu equipo.",
-    img: "/community/3.jpg"
+    img: withBase("/community/3.jpg")
   },
   {
     title: "Trivias y actividades interactivas",
     desc: "Impulsa el engagement con trivias, juegos y actividades recreativas a través de la app móvil.",
-    img: "/community/4.jpg"
+    img: withBase("/community/4.jpg")
   },
 ];
 ---
@@ -33,11 +34,11 @@ const items = [
   title="Loyalty"
   description="Conecta, fideliza y haz crecer tu comunidad de hinchas"
   keywords="comunidad, hinchas, fidelización, clubes deportivos"
-  image="/icon.png"
+  image={withBase("/icon.png")}
 >
   <section
     class="w-full h-screen relative flex items-center justify-center bg-cover bg-no-repeat bg-center bg-fixed"
-    style="background-image: url('/banner.jpg');"
+    style={`background-image: url('${withBase("/banner.jpg")}');`}
   >
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
@@ -61,7 +62,7 @@ const items = [
       </h1>
       <div class="grid lg:grid-cols-2 gap-20 items-center justify-center">
         <div>
-          <img src="/sales.jpg" class="animated-banner rounded-md shadow-lg" />
+          <img src={withBase("/sales.jpg")} class="animated-banner rounded-md shadow-lg" />
         </div>
         <div class="space-y-4">
           <div class="grid grid-cols-[25px_1fr] items-start">
@@ -127,7 +128,7 @@ const items = [
           </div>
         </div>
         <div class="order-1 lg:order-2 flex justify-center">
-          <img src="/community/img-1.png" alt="Ecosistema integral" class="animated-banner" />
+          <img src={withBase("/community/img-1.png")} alt="Ecosistema integral" class="animated-banner" />
         </div>
       </div>
     </div>
@@ -145,7 +146,7 @@ const items = [
   <section class="pb-16 bg-[#F2FBFF]">
     <div class="container mx-auto">
       <div class="lg:flex gap-10 lg:px-40">
-        <img src="/bolivar-icon.png" class="m-auto" />
+        <img src={withBase("/bolivar-icon.png")} class="m-auto" />
         <h5 class="text-[#013B79] font-light text-xl mt-5 lg:mt-0">
           "<span class="text-[#06E3F4]">+</span>FAN es una plataforma integral que ayuda a gestionar en un solo lugar la venta de entradas, venta de productos, generar contenido de valor y dar esa recompensa al hincha fiel."
         </h5>
@@ -224,7 +225,7 @@ const items = [
             </div>
           </div>
           <div class="flex-1 flex justify-center items-center p-10">
-            <img src="/favicon.svg" class="mr-3 w-48" alt="Fan Logo" />
+            <img src={withBase("/favicon.svg")} class="mr-3 w-48" alt="Fan Logo" />
           </div>
         </div>
       </Card>

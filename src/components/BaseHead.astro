@@ -1,4 +1,5 @@
 ---
+import { withBase } from "@/lib/utils";
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
@@ -9,14 +10,14 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
-const { title, description, keywords, image = "/favicon.svg" } = Astro.props;
+const { title, description, keywords, image = withBase("/favicon.svg") } = Astro.props;
 ---
 
 <head>
     <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://use.typekit.net/lgx2adh.css" />
 

@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { cn, isSamePath, withBase } from "@/lib/utils";
 import { usePathname } from "@/lib/navigation";
 import { Users2, MessageSquareText, Building2 } from "lucide-react";
 
@@ -19,9 +19,9 @@ export function Navigation() {
   const pathname = usePathname();
   
   const menuItems = [
-    { href: "/", label: "Inicio" },
-    { href: "/ticketing", label: "Ticketing" },
-    { href: "/loyalty", label: "Loyalty" },
+    { href: withBase("/"), label: "Inicio" },
+    { href: withBase("/ticketing"), label: "Ticketing" },
+    { href: withBase("/loyalty"), label: "Loyalty" },
     {
       label: "Más productos",
       items: [
@@ -59,7 +59,7 @@ export function Navigation() {
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "text-gray-600 hover:text-[#013B79]",
-                    pathname === item.href && "text-[#013B79] font-semibold bg-blue-50"
+                    isSamePath(pathname, item.href) && "text-[#013B79] font-semibold bg-blue-50"
                   )}
                 >
                   {item.label}
